@@ -8,6 +8,9 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroHome from "@/assets/hero-home.jpg";
+import serviceHandwash from "@/assets/service-handwash.jpg";
+import serviceAutomatic from "@/assets/service-automatic.jpg";
+import ctaWorker from "@/assets/cta-worker.jpg";
 
 const services = [
   {
@@ -64,9 +67,17 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
             >
-              <Card className="h-full border-border/50 hover:border-primary/30 transition-all hover:shadow-lg group">
+              <Card className="h-full border-border/50 hover:border-primary/30 transition-all hover:shadow-lg group overflow-hidden">
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={i === 0 ? serviceHandwash : serviceAutomatic}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors -mt-12 relative z-10 border-4 border-background">
                     <service.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-display font-semibold mb-3">{service.title}</h3>
@@ -141,18 +152,22 @@ const Index = () => {
       </SectionWrapper>
 
       {/* CTA Banner */}
-      <SectionWrapper dark className="text-center">
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-primary mb-4">Ready to Ride the Wave?</h2>
-        <p className="text-foam/60 mb-8 max-w-xl mx-auto">Get your truck sparkling clean today. Walk-ins welcome or call ahead to schedule.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 font-display tracking-wider">
-            <a href="tel:+15551234567">Call Now</a>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="text-lg px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-display tracking-wider">
-            <Link to="/offerings">View Pricing</Link>
-          </Button>
+      <section className="relative py-20 overflow-hidden">
+        <img src={ctaWorker} alt="Big Wave worker" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-ocean-dark/85" />
+        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-primary mb-4">Ready to Ride the Wave?</h2>
+          <p className="text-foam/70 mb-8 max-w-xl mx-auto">Get your truck sparkling clean today. Walk-ins welcome or call ahead to schedule.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 font-display tracking-wider">
+              <a href="tel:+15551234567">Call Now</a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-display tracking-wider">
+              <Link to="/offerings">View Pricing</Link>
+            </Button>
+          </div>
         </div>
-      </SectionWrapper>
+      </section>
 
       <Footer />
     </div>

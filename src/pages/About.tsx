@@ -5,6 +5,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroAbout from "@/assets/hero-about.jpg";
+import aboutFacility from "@/assets/about-facility.jpg";
 
 const stats = [
   { icon: Truck, value: "50,000+", label: "Trucks Washed" },
@@ -26,14 +27,25 @@ const About = () => {
 
       {/* Story */}
       <SectionWrapper>
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">Our Story</h2>
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            Big Wave Truck Wash was founded with a simple mission: provide the highest quality truck washing services at competitive prices. What started as a single wash bay has grown into a full-service facility equipped with both professional hand wash teams and state-of-the-art automatic wash systems.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            We understand that your trucks are your livelihood. That's why we treat every vehicle like it's our own — with care, precision, and pride. From owner-operators to large fleet managers, we deliver a consistent, reliable wash experience every single time.
-          </p>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">Our Story</h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Big Wave Truck Wash was founded with a simple mission: provide the highest quality truck washing services at competitive prices. What started as a single wash bay has grown into a full-service facility equipped with both professional hand wash teams and state-of-the-art automatic wash systems.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              We understand that your trucks are your livelihood. That's why we treat every vehicle like it's our own — with care, precision, and pride. From owner-operators to large fleet managers, we deliver a consistent, reliable wash experience every single time.
+            </p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-xl overflow-hidden shadow-2xl"
+          >
+            <img src={aboutFacility} alt="Big Wave Truck Wash facility" className="w-full h-full object-cover" loading="lazy" />
+          </motion.div>
         </div>
       </SectionWrapper>
 

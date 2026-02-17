@@ -7,6 +7,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroHandwash from "@/assets/hero-handwash.jpg";
+import handwashDetail from "@/assets/handwash-detail.jpg";
 
 const packages = [
   {
@@ -53,11 +54,22 @@ const HandWash = () => {
 
       {/* Description */}
       <SectionWrapper>
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">The Human Touch</h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Our hand wash team doesn't just clean your truck — they care for it. Using premium products and proven techniques, our trained professionals deliver a meticulous clean that automated systems simply can't match. From cab to trailer, every surface gets the attention it deserves.
-          </p>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="rounded-xl overflow-hidden shadow-2xl"
+          >
+            <img src={handwashDetail} alt="Detailed truck cleaning result" className="w-full h-full object-cover" loading="lazy" />
+          </motion.div>
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">The Human Touch</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Our hand wash team doesn't just clean your truck — they care for it. Using premium products and proven techniques, our trained professionals deliver a meticulous clean that automated systems simply can't match. From cab to trailer, every surface gets the attention it deserves.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
 
