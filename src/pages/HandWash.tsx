@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothImage from "@/components/SmoothImage";
 import heroHandwash from "@/assets/hero-handwash.jpg";
 import handwashDetail from "@/assets/handwash-detail.jpg";
 
@@ -62,7 +63,7 @@ const HandWash = () => {
             transition={{ duration: 0.6 }}
             className="rounded-xl overflow-hidden shadow-2xl"
           >
-            <img src={handwashDetail} alt="Detailed truck cleaning result" className="w-full h-full object-cover" loading="lazy" />
+            <SmoothImage src={handwashDetail} alt="Detailed truck cleaning result" className="w-full h-full object-cover" loading="lazy" />
           </motion.div>
           <div>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">The Human Touch</h2>

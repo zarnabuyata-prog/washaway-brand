@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothImage from "@/components/SmoothImage";
 import heroAbout from "@/assets/hero-about.jpg";
 import aboutFacility from "@/assets/about-facility.jpg";
 
@@ -44,7 +45,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="rounded-xl overflow-hidden shadow-2xl"
           >
-            <img src={aboutFacility} alt="Big Wave Truck Wash facility" className="w-full h-full object-cover" loading="lazy" />
+            <SmoothImage src={aboutFacility} alt="Big Wave Truck Wash facility" className="w-full h-full object-cover" loading="lazy" />
           </motion.div>
         </div>
       </SectionWrapper>

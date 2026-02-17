@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SmoothImage from "@/components/SmoothImage";
 
 interface HeroSectionProps {
   image: string;
@@ -14,7 +15,7 @@ interface HeroSectionProps {
 const HeroSection = ({ image, title, subtitle, ctaText, ctaLink, overlay = true }: HeroSectionProps) => {
   return (
     <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-      <img
+      <SmoothImage
         src={image}
         alt={title}
         className="absolute inset-0 w-full h-full object-cover"

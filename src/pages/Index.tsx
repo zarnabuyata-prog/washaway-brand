@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothImage from "@/components/SmoothImage";
 import heroHome from "@/assets/hero-home.jpg";
 import serviceHandwash from "@/assets/service-handwash.jpg";
 import serviceAutomatic from "@/assets/service-automatic.jpg";
@@ -69,7 +70,7 @@ const Index = () => {
             >
               <Card className="h-full border-border/50 hover:border-primary/30 transition-all hover:shadow-lg group overflow-hidden">
                 <div className="h-48 overflow-hidden">
-                  <img
+                  <SmoothImage
                     src={i === 0 ? serviceHandwash : serviceAutomatic}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -153,7 +154,7 @@ const Index = () => {
 
       {/* CTA Banner */}
       <section className="relative py-20 overflow-hidden">
-        <img src={ctaWorker} alt="Big Wave worker" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <SmoothImage src={ctaWorker} alt="Big Wave worker" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-ocean-dark/85" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-primary mb-4">Ready to Ride the Wave?</h2>
