@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        display: ['Oswald', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        ocean: {
+          dark: "hsl(var(--ocean-dark))",
+          deep: "hsl(var(--ocean-deep))",
+        },
+        wave: {
+          blue: "hsl(var(--wave-blue))",
+          teal: "hsl(var(--wave-teal))",
+        },
+        foam: "hsl(var(--foam-white))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
