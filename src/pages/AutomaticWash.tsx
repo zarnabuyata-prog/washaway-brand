@@ -7,6 +7,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroAutomatic from "@/assets/hero-automatic.jpg";
+import automaticProcess from "@/assets/automatic-process.jpg";
 
 const tiers = [
   {
@@ -41,22 +42,24 @@ const AutomaticWash = () => {
       />
 
       {/* 24/7 Callout */}
-      <SectionWrapper dark>
-        <div className="flex flex-col items-center text-center">
+      <section className="relative py-20 overflow-hidden">
+        <img src={automaticProcess} alt="Automatic wash in action" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-ocean-dark/80" />
+        <div className="relative z-10 flex flex-col items-center text-center px-4">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
-            className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6"
+            className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-6 backdrop-blur-sm"
           >
             <Clock className="w-10 h-10 text-primary" />
           </motion.div>
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-primary mb-4">Open 24 Hours, 7 Days a Week</h2>
-          <p className="text-foam/60 max-w-2xl">
+          <p className="text-foam/70 max-w-2xl">
             Our automatic wash bay never sleeps. Whether it's 3 AM or 3 PM, drive in and get a spotless wash in minutes. No appointment needed — just pull up and go.
           </p>
         </div>
-      </SectionWrapper>
+      </section>
 
       {/* How It Works */}
       <SectionWrapper>
