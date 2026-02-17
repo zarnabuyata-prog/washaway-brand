@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothImage from "@/components/SmoothImage";
 import heroAutomatic from "@/assets/hero-automatic.jpg";
 import automaticProcess from "@/assets/automatic-process.jpg";
 
@@ -43,7 +44,7 @@ const AutomaticWash = () => {
 
       {/* 24/7 Callout */}
       <section className="relative py-20 overflow-hidden">
-        <img src={automaticProcess} alt="Automatic wash in action" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <SmoothImage src={automaticProcess} alt="Automatic wash in action" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-ocean-dark/80" />
         <div className="relative z-10 flex flex-col items-center text-center px-4">
           <motion.div
