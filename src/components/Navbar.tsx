@@ -7,11 +7,12 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
+
   { label: "Hand Wash", path: "/hand-wash" },
   { label: "Automatic Wash", path: "/automatic-wash" },
   { label: "Offerings", path: "/offerings" },
   { label: "Vacancies", path: "/vacancies" },
+  { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
 
