@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import heroContact from "@/assets/hero-contact.jpg";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "(555) 123-4567", href: "tel:+15551234567" },
@@ -16,24 +18,11 @@ const Contact = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero */}
-      <section className="bg-ocean-deep py-20 text-center px-4">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary-foreground mb-4"
-        >
-          Contact Us
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-foam/60 text-lg max-w-2xl mx-auto"
-        >
-          We'd love to hear from you. Reach out anytime — we're here to help.
-        </motion.p>
-      </section>
+      <HeroSection
+        image={heroContact}
+        title="Contact Us"
+        subtitle="We'd love to hear from you. Reach out anytime — we're here to help."
+      />
 
       {/* Contact Info Cards */}
       <SectionWrapper>

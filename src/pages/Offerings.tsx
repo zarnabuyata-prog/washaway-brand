@@ -6,6 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SectionWrapper from "@/components/SectionWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import heroOfferings from "@/assets/hero-offerings.jpg";
 
 const handWashPackages = [
   { name: "Basic Wash", price: "$75", features: ["Exterior hand wash", "Wheel cleaning", "Rinse & dry", "Basic tire dressing"] },
@@ -72,24 +74,11 @@ const Offerings = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero */}
-      <section className="bg-ocean-deep py-20 text-center px-4">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-primary-foreground mb-4"
-        >
-          Our Offerings
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-foam/60 text-lg max-w-2xl mx-auto"
-        >
-          Complete service descriptions and transparent pricing for every wash option
-        </motion.p>
-      </section>
+      <HeroSection
+        image={heroOfferings}
+        title="Our Offerings"
+        subtitle="Complete service descriptions and transparent pricing for every wash option"
+      />
 
       {/* Tabbed Pricing */}
       <SectionWrapper>
