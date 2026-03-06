@@ -8,6 +8,7 @@ import About from "./pages/About";
 import HandWash from "./pages/HandWash";
 import AutomaticWash from "./pages/AutomaticWash";
 import Offerings from "./pages/Offerings";
+import Pricing from "./pages/Pricing";
 import Vacancies from "./pages/Vacancies";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/hand-wash" element={<HandWash />} />
           <Route path="/automatic-wash" element={<AutomaticWash />} />
           <Route path="/offerings" element={<Offerings />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/vacancies" element={<Vacancies />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
