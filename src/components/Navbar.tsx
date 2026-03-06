@@ -10,6 +10,7 @@ const navLinks = [
 
   { label: "Hand Wash", path: "/hand-wash" },
   { label: "Automatic Wash", path: "/automatic-wash" },
+  { label: "Pricing", path: "/pricing" },
   { label: "Offerings", path: "/offerings" },
   { label: "Vacancies", path: "/vacancies" },
   { label: "About", path: "/about" },
