@@ -42,9 +42,9 @@ const vehicles: VehicleCategory[] = [
       { name: "Big Wave Basic", price: "$49.00", description: "Touch free wash, spot free rinse" },
     ],
     monthlyMembership: [
-      { name: "Big Wave Signature", price: "$249.00", description: "Unlimited Signature washes all month — ceramic seal, boosted air dry, undercarriages, spot free rinse", highlight: true },
-      { name: "Big Wave Prime", price: "$199.00", description: "Unlimited Prime washes all month — boosted air dry, undercarriages, spot free rinse" },
-      { name: "Big Wave Basic", price: "$139.00", description: "Unlimited Basic washes all month — touch free wash, spot free rinse" },
+      { name: "Big Wave Signature", price: "$249.00", description: "Unlimited Signature washes all month", highlight: true },
+      { name: "Big Wave Prime", price: "$199.00", description: "Unlimited Prime washes all month" },
+      { name: "Big Wave Basic", price: "$139.00", description: "Unlimited Basic washes all month" },
     ],
     manualWash: [
       { name: "Manual Wash", price: "$49.99", description: "Professional manual wash — for a limited time only!", highlight: true },
@@ -55,13 +55,13 @@ const vehicles: VehicleCategory[] = [
     title: "Tractor Trailer",
     image: vehicleTractorTrailer,
     singleWash: [
-      { name: "Big Wave Signature", price: "$149.00", description: "Hand Brush: full tractor & trailer — ceramic seal, boosted air dry, undercarriages, spot free rinse", highlight: true },
-      { name: "Big Wave Prime", price: "$119.00", description: "Hand Brush: full tractor & trailer — boosted air dry, undercarriages, spot free rinse" },
-      { name: "Big Wave Basic", price: "$79.00", description: "Touch free wash, spot free rinse" },
+      { name: "Big Wave Signature", price: "$139.00", description: "Hand Brush: front / back / wheels / sides — ceramic seal, boosted air dry, undercarriages, spot free rinse", highlight: true },
+      { name: "Big Wave Prime", price: "$119.00", description: "Hand Brush: front / back / wheels / sides — boosted air dry, undercarriages, spot free rinse" },
+      { name: "Big Wave Basic", price: "$69.00", description: "Touch free wash, spot free rinse" },
     ],
     monthlyMembership: [
-      { name: "Big Wave Signature", price: "$349.00", description: "Unlimited Signature washes all month", highlight: true },
-      { name: "Big Wave Prime", price: "$279.00", description: "Unlimited Prime washes all month" },
+      { name: "Big Wave Signature", price: "$299.00", description: "Unlimited Signature washes all month", highlight: true },
+      { name: "Big Wave Prime", price: "$249.00", description: "Unlimited Prime washes all month" },
       { name: "Big Wave Basic", price: "$199.00", description: "Unlimited Basic washes all month" },
     ],
     manualWash: [
@@ -70,36 +70,33 @@ const vehicles: VehicleCategory[] = [
   },
   {
     id: "washout",
-    title: "Tractor Trailer Wash Out",
+    title: "Tractor–Trailer Wash Out",
     image: vehicleWashout,
     singleWash: [
-      { name: "Full Wash Out", price: "$129.00", description: "Complete interior trailer wash out — sanitized, deodorized, and pressure cleaned", highlight: true },
-      { name: "Standard Wash Out", price: "$89.00", description: "Interior pressure wash and rinse" },
+      { name: "Wash Out 1", price: "$39.99", description: "Minor dust and load debris", highlight: false },
+      { name: "Wash Out 2", price: "$49.99", description: "Light nursery debris, above average load debris" },
+      { name: "Wash Out 3", price: "$69.99", description: "Conveyor wash, Hopper wash, Tanker wash, Heavy debris", highlight: true },
+      { name: "Wash Out 4", price: "$89.99", description: "Significant labor-intensive washout — e.g. Saw dust, Heavy potato, thick dirt, Trailer + pup, etc." },
     ],
-    monthlyMembership: [
-      { name: "Full Wash Out", price: "$299.00", description: "Unlimited full wash outs all month", highlight: true },
-      { name: "Standard Wash Out", price: "$219.00", description: "Unlimited standard wash outs all month" },
-    ],
-    manualWash: [
-      { name: "Manual Wash Out", price: "$69.99", description: "Manual interior cleaning — for a limited time only!", highlight: true },
-    ],
+    monthlyMembership: [],
+    manualWash: [],
   },
   {
     id: "rv-large",
     title: "RV/Camper/Box Truck Over 30'",
     image: vehicleRvLarge,
     singleWash: [
-      { name: "Big Wave Signature", price: "$119.00", description: "Hand Brush: full exterior — ceramic seal, boosted air dry, spot free rinse", highlight: true },
-      { name: "Big Wave Prime", price: "$89.00", description: "Hand Brush: full exterior — boosted air dry, spot free rinse" },
-      { name: "Big Wave Basic", price: "$59.00", description: "Touch free wash, spot free rinse" },
+      { name: "Big Wave Signature", price: "$119.00", description: "Hand Brush: front / back / wheels / sides — ceramic seal, boosted air dry, undercarriages, spot free rinse", highlight: true },
+      { name: "Big Wave Prime", price: "$99.00", description: "Hand Brush: front / back / wheels / sides — boosted air dry, undercarriages, spot free rinse" },
+      { name: "Big Wave Basic", price: "$79.00", description: "Touch free wash, spot free rinse" },
     ],
     monthlyMembership: [
-      { name: "Big Wave Signature", price: "$289.00", description: "Unlimited Signature washes all month", highlight: true },
+      { name: "Big Wave Signature", price: "$279.00", description: "Unlimited Signature washes all month", highlight: true },
       { name: "Big Wave Prime", price: "$229.00", description: "Unlimited Prime washes all month" },
       { name: "Big Wave Basic", price: "$169.00", description: "Unlimited Basic washes all month" },
     ],
     manualWash: [
-      { name: "Manual Wash", price: "$59.99", description: "Professional manual wash — for a limited time only!", highlight: true },
+      { name: "Manual Wash", price: "$69.99", description: "Professional manual wash — for a limited time only!", highlight: true },
     ],
   },
   {
@@ -107,17 +104,17 @@ const vehicles: VehicleCategory[] = [
     title: "RV/Camper/Box Truck Under 30'",
     image: vehicleRvSmall,
     singleWash: [
-      { name: "Big Wave Signature", price: "$89.00", description: "Hand Brush: full exterior — ceramic seal, boosted air dry, spot free rinse", highlight: true },
-      { name: "Big Wave Prime", price: "$69.00", description: "Hand Brush: full exterior — boosted air dry, spot free rinse" },
-      { name: "Big Wave Basic", price: "$45.00", description: "Touch free wash, spot free rinse" },
+      { name: "Big Wave Signature", price: "$89.00", description: "Hand Brush: front / back / wheels / sides — ceramic seal, boosted air dry, undercarriages, spot free rinse", highlight: true },
+      { name: "Big Wave Prime", price: "$69.00", description: "Hand Brush: front / back / wheels / sides — boosted air dry, undercarriages, spot free rinse" },
+      { name: "Big Wave Basic", price: "$39.00", description: "Touch free wash, spot free rinse" },
     ],
     monthlyMembership: [
       { name: "Big Wave Signature", price: "$219.00", description: "Unlimited Signature washes all month", highlight: true },
       { name: "Big Wave Prime", price: "$179.00", description: "Unlimited Prime washes all month" },
-      { name: "Big Wave Basic", price: "$129.00", description: "Unlimited Basic washes all month" },
+      { name: "Big Wave Basic", price: "$119.00", description: "Unlimited Basic washes all month" },
     ],
     manualWash: [
-      { name: "Manual Wash", price: "$44.99", description: "Professional manual wash — for a limited time only!", highlight: true },
+      { name: "Manual Wash", price: "$49.99", description: "Professional manual wash — for a limited time only!", highlight: true },
     ],
   },
   {
@@ -125,17 +122,17 @@ const vehicles: VehicleCategory[] = [
     title: "Vehicles Under 23'",
     image: vehicleSmall,
     singleWash: [
-      { name: "Big Wave Signature", price: "$59.00", description: "Hand Brush: full exterior — ceramic seal, boosted air dry, spot free rinse", highlight: true },
-      { name: "Big Wave Prime", price: "$45.00", description: "Hand Brush: full exterior — boosted air dry, spot free rinse" },
-      { name: "Big Wave Basic", price: "$29.00", description: "Touch free wash, spot free rinse" },
+      { name: "Big Wave Signature", price: "$45.00", description: "Hand Brush: front / back / wheels / sides — ceramic seal, boosted air dry, undercarriages, spot free rinse", highlight: true },
+      { name: "Big Wave Prime", price: "$35.00", description: "Hand Brush: front / back / wheels / sides — boosted air dry, undercarriages, spot free rinse" },
+      { name: "Big Wave Basic", price: "$25.00", description: "Touch free wash, spot free rinse" },
     ],
     monthlyMembership: [
-      { name: "Big Wave Signature", price: "$149.00", description: "Unlimited Signature washes all month", highlight: true },
-      { name: "Big Wave Prime", price: "$119.00", description: "Unlimited Prime washes all month" },
-      { name: "Big Wave Basic", price: "$89.00", description: "Unlimited Basic washes all month" },
+      { name: "Big Wave Signature", price: "$99.00", description: "Unlimited Signature washes all month", highlight: true },
+      { name: "Big Wave Prime", price: "$85.00", description: "Unlimited Prime washes all month" },
+      { name: "Big Wave Basic", price: "$65.00", description: "Unlimited Basic washes all month" },
     ],
     manualWash: [
-      { name: "Manual Wash", price: "$29.99", description: "Professional manual wash — for a limited time only!", highlight: true },
+      { name: "Manual Wash", price: "$19.99", description: "Professional manual wash — for a limited time only!", highlight: true },
     ],
   },
 ];
