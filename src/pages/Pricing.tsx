@@ -238,26 +238,33 @@ const Pricing = () => {
                     </Button>
                   </div>
 
-                  {/* Tabs */}
-                  <Tabs defaultValue="single" className="w-full">
-                    <TabsList className="grid w-full grid-cols-3 mb-6">
-                      <TabsTrigger value="single" className="font-display text-xs sm:text-sm">Single Wash</TabsTrigger>
-                      <TabsTrigger value="monthly" className="font-display text-xs sm:text-sm">Monthly Membership</TabsTrigger>
-                      <TabsTrigger value="manual" className="font-display text-xs sm:text-sm">Manual Wash</TabsTrigger>
-                    </TabsList>
+                  {/* Tabs or direct list for washout */}
+                  {selectedData.monthlyMembership.length > 0 ? (
+                    <Tabs defaultValue="single" className="w-full">
+                      <TabsList className="grid w-full grid-cols-3 mb-6">
+                        <TabsTrigger value="single" className="font-display text-xs sm:text-sm">Single Wash</TabsTrigger>
+                        <TabsTrigger value="monthly" className="font-display text-xs sm:text-sm">Monthly Membership</TabsTrigger>
+                        <TabsTrigger value="manual" className="font-display text-xs sm:text-sm">Manual Wash</TabsTrigger>
+                      </TabsList>
 
-                    <TabsContent value="single">
+                      <TabsContent value="single">
+                        <PricingCards packages={selectedData.singleWash} />
+                      </TabsContent>
+
+                      <TabsContent value="monthly">
+                        <PricingCards packages={selectedData.monthlyMembership} />
+                      </TabsContent>
+
+                      <TabsContent value="manual">
+                        <PricingCards packages={selectedData.manualWash} />
+                      </TabsContent>
+                    </Tabs>
+                  ) : (
+                    <div>
+                      <h4 className="text-lg font-display font-semibold mb-4 text-muted-foreground">Wash Out Tiers</h4>
                       <PricingCards packages={selectedData.singleWash} />
-                    </TabsContent>
-
-                    <TabsContent value="monthly">
-                      <PricingCards packages={selectedData.monthlyMembership} />
-                    </TabsContent>
-
-                    <TabsContent value="manual">
-                      <PricingCards packages={selectedData.manualWash} />
-                    </TabsContent>
-                  </Tabs>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             )}
